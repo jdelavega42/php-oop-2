@@ -12,5 +12,9 @@ class Product {
         $this->name = $_name;
         $this->price = $_price;
     }
+
+    public function getClassName(){
+        return get_class();
+    }
 }
 ?>

@@ -8,6 +8,9 @@ class Food extends Product {
         parent::__construct($_name, $_price, $_category);
         $this->expire = $_expire;
     }
+    public function getClassName(){
+        return get_class();
+    }
 }
 
 ?>

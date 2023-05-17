@@ -8,6 +8,7 @@ class Kennel extends Product {
         parent::__construct($_name, $_price, $_category);
         $this->dimension = $_dimension;
     }
+    
 }
 
 ?>

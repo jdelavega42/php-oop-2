@@ -8,6 +8,9 @@ class Game extends Product {
         parent::__construct($_name, $_price, $_category);
         $this->color = $_color;
     }
+    public function getClassName(){
+        return get_class();
+    }
 }
 
 ?>

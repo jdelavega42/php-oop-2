@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . "/db.php";
 var_dump($products);
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@ var_dump($products);
                     <h5 class="card-title"><?php echo $product->name ?></h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary"><?php echo $product->category->category ?></h6>
                     <p class="card-text"><?php echo $product->price ?></p>
-                    <p class="card-text"><?php if($product->expire){echo $product->expire;} elseif ($product->color){echo $product->color;} else{echo $product->dimension;} ?></p>
+                    <p class="card-text"><?php if($product->getClassName() == 'Food'){echo $product->expire;} elseif ($product->getClassName() == 'Game'){echo $product->color;} else{echo $product->dimension;} ?></p>
                 </div>
             </div>
         <?php } ?>
