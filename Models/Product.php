@@ -2,19 +2,30 @@
 require_once __DIR__ . '/Category.php';
 
 class Product {
-    public $category;
-    public $name;
-    public $price;
 
-    function __construct(Category $_category,$_name, $_price)
+    function __construct(public Category $category, public $name, public $price)
     {
-        $this->category = $_category;
-        $this->name = $_name;
-        $this->price = $_price;
+        $this->category = $category;
+        $this->name = $name;
+        $this->price = $price;
     }
+
+    public function setPrice($price) {
+        if (!is_int($price)){
+            throw new Exception("Price must be a number", 1);
+        } else if($price < 0){
+            throw new Exception(('Price must be higher than 0'));
+        } else {
+            $this -> price = $price;
+        }
+    } 
 
     public function getClassName(){
         return get_class();
     }
-}
+
+    function getDetails(){
+        return "";
+    }
+}   
 ?>

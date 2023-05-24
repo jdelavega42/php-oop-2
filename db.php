@@ -10,9 +10,9 @@ $categories = [
 ];
 
 $products = [
-    new Food($categories[0],'snack', '19,99', '01/01/01'),
-    new Game($categories[1], 'gioco', '9,99', 'rosso'),
-    new Kennel($categories[0], 'cuccia', '25,99', '100x150') 
+    new Food($categories[0],'snack', 19.99, '01/01/01'),
+    new Game($categories[1], 'gioco', 9.99, 'rosso'),
+    new Kennel($categories[0], 'cuccia', 25.99, '100x150') 
 ]
 ?>
 

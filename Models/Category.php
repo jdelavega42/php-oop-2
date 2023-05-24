@@ -1,9 +1,9 @@
 <?php 
 class Category {
-    public $category;
-    function __construct($_category)
+
+    function __construct(public String $category, public String $icon = '')
     {
-        $this->category = $_category;
+        $this->category = $category;
     }
 }
 

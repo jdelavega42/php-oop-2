@@ -2,11 +2,11 @@
 require_once __DIR__ . '/Product.php';
 
 class Kennel extends Product {
-    public $dimension;
-    function __construct($_name, $_price, $_category, $_dimension)
+
+    function __construct($category, $name, $price, public $dimension)
     {
-        parent::__construct($_name, $_price, $_category);
-        $this->dimension = $_dimension;
+        parent::__construct( $category, $name, $price);
+        $this->dimension = $dimension;
     }
     
 }
